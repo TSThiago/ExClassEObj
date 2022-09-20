@@ -1,3 +1,4 @@
+// Parte Carro
 class Carro{
     equipe
     potencia
@@ -37,3 +38,12 @@ red.velMax = parseFloat(385)
 red.aceleracao = parseFloat(1.6)
 
 carros.push(fer,mer,mc,red)
+
+// Parte Corrida
+
+class Corrida{
+    nome
+    tipo
+    distancia
+    vencedor
+}
