@@ -5,8 +5,8 @@ class Carro{
     velMax
     aceleracao
 
-    CalcularTempo(distancia){
-        let resultado = distancia / (this.velMax / this.aceleracao)
+    CalcularTempo(distanciaParametro){
+        let resultado = distanciaParametro / (this.velMax / this.aceleracao)
         return resultado
     }
 }
@@ -46,4 +46,24 @@ class Corrida{
     tipo
     distancia
     vencedor
+
+    DefinirVencedor(){
+        let ganhador = Infinity
+        carros.forEach((x,index) => {
+            if(x.CalcularTempo(this.distancia) < ganhador){
+                ganhador = x.CalcularTempo(this.distancia)
+                this.vencedor = x.equipe
+            }
+        })
+    }
+
+    MostrarVencedor(){
+        alert(this.vencedor)
+    }
 }
+
+let inter = new Corrida;
+inter.nome = "Interlagos"
+inter.tipo = "Fórmula 1"
+inter.distancia = 4300
+inter.DefinirVencedor()
