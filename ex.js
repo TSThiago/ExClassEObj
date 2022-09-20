@@ -58,7 +58,7 @@ class Corrida{
     }
 
     MostrarVencedor(){
-        alert(this.vencedor)
+        alert("Vencedor: " +this.vencedor)
     }
 }
 
@@ -67,3 +67,4 @@ inter.nome = "Interlagos"
 inter.tipo = "Fórmula 1"
 inter.distancia = 4300
 inter.DefinirVencedor()
+inter.MostrarVencedor()
