@@ -34,13 +34,22 @@ class Biblioteca{
         })
     }
 
+    DevolverLivro(livroParametro){
+        arrayLivros.forEach((x,index) => {
+            if(x.Titulo == livroParametro && x.Disponibilidade == false){
+                    x.Disponibilidade = true
+                    console.log("Devolução efetuada.")
+            }
+        })
+    }
 }
 let biblioteca = new Biblioteca;
 biblioteca.Nome = "Biblioteca A"
 biblioteca.Endereco = "SP"
 biblioteca.Telefone = "1111-1111"
-biblioteca.BuscarLivro("Livro B")
-biblioteca.EmprestarLivro("livro A")
+biblioteca.BuscarLivro("Livro A")
+biblioteca.EmprestarLivro("Livro A")
+biblioteca.DevolverLivro("Livro A")
 
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
