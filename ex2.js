@@ -8,6 +8,12 @@ class Livro{
     Disponibilidade
 }
 
+class Biblioteca{
+    Nome
+    Endereco
+    Telefone
+}
+
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
 livroUm.Autor = "Luiz"
@@ -30,3 +36,4 @@ livroTres.AnoDePublicacao = 2005
 livroTres.Disponibilidade = false
 
 arrayLivros.push(livroUm,livroDois,livroTres)
+
