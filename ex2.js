@@ -22,7 +22,25 @@ class Biblioteca{
         })
     }
 
+    EmprestarLivro(livroParametro){
+        arrayLivros.forEach((x,index) => {
+            if(x.Titulo == livroParametro && x.Disponibilidade == true){
+                    x.Disponibilidade = false
+                    console.log("Empréstimo efetuado.")
+                    return true
+            }else{
+                return false
+            }
+        })
+    }
+
 }
+let biblioteca = new Biblioteca;
+biblioteca.Nome = "Biblioteca A"
+biblioteca.Endereco = "SP"
+biblioteca.Telefone = "1111-1111"
+biblioteca.BuscarLivro("Livro B")
+biblioteca.EmprestarLivro("livro A")
 
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
