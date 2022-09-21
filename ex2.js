@@ -24,12 +24,6 @@ class Biblioteca{
 
 }
 
-let biblioteca = new Biblioteca;
-biblioteca.Nome = "Biblioteca A"
-biblioteca.Endereco = "SP"
-biblioteca.Telefone = "1111-1111"
-biblioteca.BuscarLivro("Livro B")
-
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
 livroUm.Autor = "Luiz"
