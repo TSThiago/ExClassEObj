@@ -12,7 +12,23 @@ class Biblioteca{
     Nome
     Endereco
     Telefone
+
+    BuscarLivro(livroParametro){
+        arrayLivros.forEach((x,index) => {
+            if(x.Titulo == livroParametro){
+                    console.log ("Titulo: " +x.Titulo+ "\nAutor: " +x.Autor+ "\nEditora: " +x.Editora+ 
+                    "\nAno de Publicação: " +x.AnoDePublicacao+ "\nDisponibilidade: X") 
+            }
+        })
+    }
+
 }
+
+let biblioteca = new Biblioteca;
+biblioteca.Nome = "Biblioteca A"
+biblioteca.Endereco = "SP"
+biblioteca.Telefone = "1111-1111"
+biblioteca.BuscarLivro("Livro B")
 
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
