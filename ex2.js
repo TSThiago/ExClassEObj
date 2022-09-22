@@ -14,28 +14,33 @@ class Biblioteca{
     Telefone
 
     BuscarLivro(livroParametro){
+        // let livro = arrayLivros.filter(x => x == livroParametro)
+        // console.log(livro)
         arrayLivros.forEach((x,index) => {
-            if(x.Titulo == livroParametro){
+            if(x.Titulo == livroParametro && x.Disponibilidade == true){
                     console.log ("Titulo: " +x.Titulo+ "\nAutor: " +x.Autor+ "\nEditora: " +x.Editora+ 
-                    "\nAno de Publicação: " +x.AnoDePublicacao+ "\nDisponibilidade: X") 
+                    "\nAno de Publicação: " +x.AnoDePublicacao+ "\nDisponibilidade: Disponível" ) 
+            }else if(x.Titulo == livroParametro && x.Disponibilidade == false){
+                console.log ("Titulo: " +x.Titulo+ "\nAutor: " +x.Autor+ "\nEditora: " +x.Editora+ 
+                "\nAno de Publicação: " +x.AnoDePublicacao+ "\nDisponibilidade: X" )  
             }
         })
     }
 
     EmprestarLivro(livroParametro){
-        arrayLivros.forEach((x,index) => {
+        let emprestimo = false
+        arrayLivros.forEach(x => {
             if(x.Titulo == livroParametro && x.Disponibilidade == true){
                     x.Disponibilidade = false
                     console.log("Empréstimo efetuado.")
-                    return true
-            }else{
-                return false
+                    emprestimo = true 
             }
         })
+        return emprestimo
     }
 
     DevolverLivro(livroParametro){
-        arrayLivros.forEach((x,index) => {
+        arrayLivros.forEach(x => {
             if(x.Titulo == livroParametro && x.Disponibilidade == false){
                     x.Disponibilidade = true
                     console.log("Devolução efetuada.")
@@ -47,9 +52,7 @@ let biblioteca = new Biblioteca;
 biblioteca.Nome = "Biblioteca A"
 biblioteca.Endereco = "SP"
 biblioteca.Telefone = "1111-1111"
-biblioteca.BuscarLivro("Livro A")
-biblioteca.EmprestarLivro("Livro A")
-biblioteca.DevolverLivro("Livro A")
+
 
 let livroUm = new Livro;
 livroUm.Titulo = "Livro A"
@@ -74,3 +77,6 @@ livroTres.Disponibilidade = false
 
 arrayLivros.push(livroUm,livroDois,livroTres)
 
+biblioteca.BuscarLivro("Livro B")
+// biblioteca.EmprestarLivro("Livro A")
+biblioteca.DevolverLivro("Livro B")
