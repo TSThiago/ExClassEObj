@@ -47,3 +47,13 @@ disponibilidade desse livro para true;
 7. Crie um objeto da classe Biblioteca e chame seus métodos.
 
 ## Parte 2
+1. Crie um método construtor para a classe Livro que recebe como parâmetro as
+informações que serão atribuídas as propriedades, com exceção de
+“Disponibilidade” que deve ter por padrão o valor “true” quando o objeto for criado;
+2. Na classe Biblioteca, adicione uma nova propriedade “AcervoDeLivros” que deve
+ser um array;
+3. Crie um método construtor para a classe Biblioteca que deve receber como
+parâmetro as informações que serão atribuídas as propriedades, com exceção da
+“AcervoDeLivros”;
+4. Na classe Biblioteca crie um método para adicionar um novo Livro na propriedade
+“AcervoDeLivros”;
