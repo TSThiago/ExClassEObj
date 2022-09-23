@@ -1,4 +1,4 @@
-Projeto Corrida
+# Projeto Corrida
 1. Crie uma classe Carro com as seguintes propriedades:
 ● Nome - qual a equipe do carro Ferrari, Mercedes, McLaren, etc;
 ● Potência - número de cavalos de potência do carro;
@@ -21,7 +21,8 @@ nome da equipe que fez o menor tempo na propriedade “Vencedor”.
 corrida.
 7. Crie um objeto da classe Corrida e chame seus métodos.
 
-Biblioteca
+# Biblioteca
+## Parte 1
 1. Crie uma classe Livro com as seguintes propriedades:
 ● Titulo - qual o nome do livro;
 ● Autor- quem escreveu o livro;;
@@ -44,3 +45,5 @@ não estiver disponível retornar false.
 passado como parâmetro o nome do livro, então trocar o valor da propriedade de
 disponibilidade desse livro para true;
 7. Crie um objeto da classe Biblioteca e chame seus métodos.
+
+## Parte 2
